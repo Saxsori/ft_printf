@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@42ABUDHABI.AE>          +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/07 20:22:21 by aaljaber          #+#    #+#              #
-#    Updated: 2021/11/07 20:22:36 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/08/06 18:56:21 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

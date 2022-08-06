@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printnbr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@42ABUDHABI.AE>          +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 19:58:22 by aaljaber          #+#    #+#             */
-/*   Updated: 2021/11/07 19:59:43 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/08/06 18:53:19 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ static size_t	length(long n)
 	return (len);
 }
 
-static char	*check(char *string, long num, size_t i)
+static char	*check(char *string, long num, size_t i, int op)
 {
 	if (num == 0)
 	{
 		string[0] = '0';
 		return (string);
 	}
-	else if (num < 0)
+	else if (num < 0 && op == 's')
 	{
 		string[0] = '-';
 		num = num * -1;
@@ -52,7 +52,7 @@ static char	*check(char *string, long num, size_t i)
 	return (string);
 }
 
-static char	*ft_itoa(int n)
+char	*ft_itoa(int n, int op)
 {
 	char	*string;
 	long	num;
@@ -72,7 +72,7 @@ static char	*ft_itoa(int n)
 	string = (char *)malloc(sizeof(char) * i + 1);
 	if (!string)
 		return (NULL);
-	check(string, num, i);
+	check(string, num, i, op);
 	return (string);
 }
 
@@ -81,7 +81,7 @@ int	printnbr(int nbr)
 	char	*num;
 	int		i;
 
-	num = ft_itoa(nbr);
+	num = ft_itoa(nbr, 's');
 	i = 0;
 	while (num[i])
 	{
